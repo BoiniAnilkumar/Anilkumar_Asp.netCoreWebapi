@@ -79,7 +79,7 @@ builder.Services.AddScoped<IMasterService, MasterService>();
 
 
 
-
+// Test change for GitHub workflow
 //builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 //builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 //builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
