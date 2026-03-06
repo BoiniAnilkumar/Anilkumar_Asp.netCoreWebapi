@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using BALLib.Common;
+using BALLib.DTOs;
+
+namespace BALLib.Services.Service_Interface
+{
+    public interface IMasterService
+    {
+        Task<ApiResponse<List<DropdownDTO>>> GetGendersAsync();
+        Task<ApiResponse<List<DropdownDTO>>> GetDepartmentsAsync(int clientId);
+        Task<ApiResponse<List<DropdownDTO>>> GetSectionsAsync(int departmentId);
+        Task<ApiResponse<List<DropdownDTO>>> GetDesignationsAsync();
+        Task<ApiResponse<List<DropdownDTO>>> GetLocationsAsync();
+        Task<ApiResponse<List<DropdownDTO>>> GetEmpTypesAsync();
+        Task<ApiResponse<List<DropdownDTO>>> GetHodLevelsAsync();
+        Task<ApiResponse<List<DropdownDTO>>> GetReportingEmployeesAsync(int clientId);
+        Task<ApiResponse<List<DropdownDTO>>> GetClientAsync();
+    }
+}
