@@ -27,17 +27,17 @@ namespace Anilkumar.Controllers
         public async Task<IActionResult> GetSections(int departmentId)
             => Success((await _service.GetSectionsAsync(departmentId)).Data);
 
-        [HttpGet("designations")]
-        public async Task<IActionResult> GetDesignations()
-            => Success((await _service.GetDesignationsAsync()).Data);
+        [HttpGet("designations/{clientId}")]
+        public async Task<IActionResult> GetDesignations(int clientId)
+            => Success((await _service.GetDesignationsAsync(clientId)).Data);
 
-        [HttpGet("locations")]
-        public async Task<IActionResult> GetLocations()
-            => Success((await _service.GetLocationsAsync()).Data);
+        [HttpGet("locations/{clientId}")]
+        public async Task<IActionResult> GetLocations(int clientId)
+            => Success((await _service.GetLocationsAsync(clientId)).Data);
 
-        [HttpGet("emptypes")]
-        public async Task<IActionResult> GetEmpTypes()
-            => Success((await _service.GetEmpTypesAsync()).Data);
+        //[HttpGet("emptypes")]
+        //public async Task<IActionResult> GetEmpTypes()
+        //    => Success((await _service.GetEmpTypesAsync()).Data);
 
         [HttpGet("ReportingEmpId/{clientId}")]
         public async Task<IActionResult> GetReportingEmployees(int clientId)

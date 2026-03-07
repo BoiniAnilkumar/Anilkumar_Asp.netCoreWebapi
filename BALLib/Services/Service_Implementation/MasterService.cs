@@ -60,9 +60,9 @@ namespace BALLib.Services.Service_Implementation
         }
 
         // ===================== DESIGNATIONS =====================
-        public async Task<ApiResponse<List<DropdownDTO>>> GetDesignationsAsync()
+        public async Task<ApiResponse<List<DropdownDTO>>> GetDesignationsAsync(int clientId)
         {
-            var data = await _repository.GetDesignationsAsync();
+            var data = await _repository.GetDesignationsAsync(clientId);
 
             var result = data.Select(d => new DropdownDTO
             {
@@ -74,9 +74,9 @@ namespace BALLib.Services.Service_Implementation
         }
 
         // ===================== LOCATIONS =====================
-        public async Task<ApiResponse<List<DropdownDTO>>> GetLocationsAsync()
+        public async Task<ApiResponse<List<DropdownDTO>>> GetLocationsAsync(int clientId)
         {
-            var data = await _repository.GetLocationsAsync();
+            var data = await _repository.GetLocationsAsync(clientId);
 
             var result = data.Select(l => new DropdownDTO
             {
@@ -88,18 +88,18 @@ namespace BALLib.Services.Service_Implementation
         }
 
         //===================== EMP TYPES =====================
-        public async Task<ApiResponse<List<DropdownDTO>>> GetEmpTypesAsync()
-        {
-            var data = await _repository.GetEmpTypesAsync();
+        //public async Task<ApiResponse<List<DropdownDTO>>> GetEmpTypesAsync()
+        //{
+        //    var data = await _repository.GetEmpTypesAsync();
 
-            var result = data.Select(e => new DropdownDTO
-            {
-                Id = e.EmployeeId,
-                Name = e.EmployeeName ?? string.Empty
-            }).ToList();
+        //    var result = data.Select(e => new DropdownDTO
+        //    {
+        //        Id = e.EmployeeId,
+        //        Name = e.EmployeeName ?? string.Empty
+        //    }).ToList();
 
-            return ApiResponse<List<DropdownDTO>>.SuccessResponse(result);
-        }
+        //    return ApiResponse<List<DropdownDTO>>.SuccessResponse(result);
+        //}
 
         //-----------------REportingEmployees-----------------
         public async Task<ApiResponse<List<DropdownDTO>>> GetReportingEmployeesAsync(int clientId)

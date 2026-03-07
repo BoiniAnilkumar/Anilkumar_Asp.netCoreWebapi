@@ -30,14 +30,18 @@ namespace CommonlibDAO.Repositories.Implementations
                 .Where(s => s.DepartmentId == departmentId)
                 .ToListAsync();
 
-        public async Task<List<tbl_Designation>> GetDesignationsAsync()
-            => await _dBContextEFCore.tbl_Designation.ToListAsync();
+        public async Task<List<tbl_Designation>> GetDesignationsAsync(int clientId)
+            => await _dBContextEFCore.tbl_Designation
+            .Where(d => d.ClientId == clientId)
+            .ToListAsync();
 
-        public async Task<List<tbl_Location>> GetLocationsAsync()
-            => await _dBContextEFCore.tbl_Location.ToListAsync();
+        public async Task<List<tbl_Location>> GetLocationsAsync(int clientId)
+            => await _dBContextEFCore.tbl_Location
+            .Where(l => l.ClientId == clientId)
+            .ToListAsync();
 
-        public async Task<List<tbl_Employee>> GetEmpTypesAsync()
-            => await _dBContextEFCore.tbl_Employee.ToListAsync();
+        //public async Task<List<tbl_Employee>> GetEmpTypesAsync()
+        //    => await _dBContextEFCore.tbl_Employee.ToListAsync();
 
         public async Task<List<tbl_HODLevel>> GetHodLevelsAsync()
             => await _dBContextEFCore.tbl_HODLevel.ToListAsync();

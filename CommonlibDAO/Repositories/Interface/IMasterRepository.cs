@@ -13,9 +13,9 @@ namespace CommonlibDAO.Repositories.Interface
         Task<List<tbl_Gender>> GetGendersAsync();
         Task<List<tbl_Department>> GetDepartmentsAsync(int clientId);
         Task<List<tbl_Section>> GetSectionsAsync(int departmentId);
-        Task<List<tbl_Designation>> GetDesignationsAsync();
-        Task<List<tbl_Location>> GetLocationsAsync();
-        Task<List<tbl_Employee>> GetEmpTypesAsync();
+        Task<List<tbl_Designation>> GetDesignationsAsync(int clientId);
+        Task<List<tbl_Location>> GetLocationsAsync(int clientId);
+        //Task<List<tbl_Employee>> GetEmpTypesAsync();
         Task<List<tbl_HODLevel>> GetHodLevelsAsync();
         Task<List<tbl_Employee>> GetReportingEmployeesAsync(int clientId);
         Task<List<tbl_Client>> GetClientAsync();

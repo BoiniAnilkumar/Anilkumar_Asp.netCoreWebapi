@@ -13,9 +13,9 @@ namespace BALLib.Services.Service_Interface
         Task<ApiResponse<List<DropdownDTO>>> GetGendersAsync();
         Task<ApiResponse<List<DropdownDTO>>> GetDepartmentsAsync(int clientId);
         Task<ApiResponse<List<DropdownDTO>>> GetSectionsAsync(int departmentId);
-        Task<ApiResponse<List<DropdownDTO>>> GetDesignationsAsync();
-        Task<ApiResponse<List<DropdownDTO>>> GetLocationsAsync();
-        Task<ApiResponse<List<DropdownDTO>>> GetEmpTypesAsync();
+        Task<ApiResponse<List<DropdownDTO>>> GetDesignationsAsync(int clientId);
+        Task<ApiResponse<List<DropdownDTO>>> GetLocationsAsync(int clientId);
+        //Task<ApiResponse<List<DropdownDTO>>> GetEmpTypesAsync();
         Task<ApiResponse<List<DropdownDTO>>> GetHodLevelsAsync();
         Task<ApiResponse<List<DropdownDTO>>> GetReportingEmployeesAsync(int clientId);
         Task<ApiResponse<List<DropdownDTO>>> GetClientAsync();
