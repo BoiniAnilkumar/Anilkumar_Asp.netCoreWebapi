@@ -71,7 +71,7 @@ namespace BALLib.Services.Service_Implementation
                     SectionId = dto.SectionId,
                     DesignationId = dto.DesignationId,
                     LocationId = dto.LocationId,
-                    WorkLocationTypeId = dto.WorkLocationTypeId,
+                    //WorkLocationTypeId = dto.WorkLocationTypeId,
                     ReportsToEmployeeId = dto.ReportsToEmployeeId,
                     IsHod = dto.IsHod,
                     HodLevelId = dto.HodLevelId,

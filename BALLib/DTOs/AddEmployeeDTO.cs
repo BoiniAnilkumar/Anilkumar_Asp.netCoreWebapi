@@ -15,7 +15,7 @@ namespace BALLib.DTOs
         [Required]
         [MaxLength(100)]
         public string? EmployeeName { get; set; }
-        [Required]
+        [Required] 
         [StringLength(12, MinimumLength = 12, ErrorMessage = "Aadhar must be 12 digits")]
         public string ? AadharNumber { get; set; }
         [Required]
@@ -36,7 +36,7 @@ namespace BALLib.DTOs
         [Required]
         public int DesignationId { get; set; }
 
-        public int? WorkLocationTypeId { get; set; }
+        //public int? WorkLocationTypeId { get; set; }
         [Required]
         public int? LocationId { get; set; }
         public int? ReportsToEmployeeId { get; set; }
