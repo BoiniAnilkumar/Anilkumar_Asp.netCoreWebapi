@@ -44,7 +44,7 @@ namespace BALLib.DTOs
         public bool IsHod { get; set; }
         public int? HodLevelId { get; set; }
 
-        public int? EmpTypeId { get; set; }
+        //public int? EmpTypeId { get; set; }
 
         public TimeSpan? InTime { get; set; }
         public TimeSpan? OutTime { get; set; }

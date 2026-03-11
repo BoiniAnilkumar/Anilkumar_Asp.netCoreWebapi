@@ -11,6 +11,7 @@ namespace BALLib.DTOs
     {
         public int EmployeeId { get; set; }
         public string? EmployeeName { get; set; }
+        public string? EmailId {get; set;}
         public string?  ClientName { get; set; }
         public string? DepartmentName { get; set; }
         public string? DesignationName { get; set; }

@@ -21,12 +21,7 @@ namespace BALLib.Services.Service_Interface
         Task<bool> DeleteEmployeeAsync(int id);
 
         Task<ApiResponse<string>> IsMobileExistsAsync(string phoneNumber);
-
-        //Task<ApiResponse<string>> IsEmployeeNameExistsAsync(string employeeName);
-
         Task<ApiResponse<string>> IsAadharExistsAsync(string aadhar);
-
-        //Task<ApiResponse<string>> IsEmailExistsAsync(string email);
     }
 }
 

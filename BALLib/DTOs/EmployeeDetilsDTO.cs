@@ -12,6 +12,7 @@ namespace BALLib.DTOs
         public int ClientId { get; set; }
         public string? EmployeeName { get; set; }
         public string? PhoneNumber { get; set; }
+        public string? Aadhar { get; set;}
         public string? EmailId { get; set; }
         public string? Gender { get; set; }
         public DateTime DOB { get; set; }

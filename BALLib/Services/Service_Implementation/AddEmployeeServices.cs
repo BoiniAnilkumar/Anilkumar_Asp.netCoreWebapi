@@ -75,7 +75,7 @@ namespace BALLib.Services.Service_Implementation
                     ReportsToEmployeeId = dto.ReportsToEmployeeId,
                     IsHod = dto.IsHod,
                     HodLevelId = dto.HodLevelId,
-                    EmpTypeId = dto.EmpTypeId,
+                   // EmpTypeId = dto.EmpTypeId,
                     InTime = dto.InTime,
                     OutTime = dto.OutTime,
                     AllowProxyAttendance = dto.AllowProxyAttendance,
