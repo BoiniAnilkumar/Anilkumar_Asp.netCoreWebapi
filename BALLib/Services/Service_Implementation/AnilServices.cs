@@ -1,12 +1,13 @@
-﻿using System;
+﻿using BALLib.Common;
+using BALLib.DTOs;
+using BALLib.DTOs.ClientDTO;
+using BALLib.Services.Service_Interface;
+using CommonlibDAO.Repositories.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BALLib.Common;
-using BALLib.DTOs;
-using BALLib.Services.Service_Interface;
-using CommonlibDAO.Repositories.Interface;
 //using CommonlibDAO.Repositories.Implementations;
 
 namespace BALLib.Services.Service_Implementation
@@ -18,21 +19,21 @@ namespace BALLib.Services.Service_Implementation
         {
             _repo = repo;
         }
-       public async Task<ApiResponse<ClientDTO>> GetClientById(int id)
+       public async Task<ApiResponse<GetClientDTO>> GetClientById(int id)
         {
             var client = await _repo.GetById(id);
             if (client == null)
-                return ApiResponse<ClientDTO>
+                return ApiResponse<GetClientDTO>
                     .FailureResponse("Client not found.");
-            var dto = new ClientDTO
+            var dto = new GetClientDTO
             {
                 Id = client.ClientId,
-                Name = client.ClientName ?? string.Empty,
+                ClientName = client.ClientName ?? string.Empty,
                 Email = client.ContactEmail ?? string.Empty,
                 Phone = client.ContactPhone ?? string.Empty,
                 Address = client.Address ?? string.Empty 
             };
-            return ApiResponse<ClientDTO>
+            return ApiResponse<GetClientDTO>
                 .SuccessResponse(dto);
         }
     }

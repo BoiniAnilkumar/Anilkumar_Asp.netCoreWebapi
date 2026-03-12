@@ -1,5 +1,6 @@
 ﻿using BALLib.Common;
 using BALLib.DTOs;
+using BALLib.DTOs.ClientDTO;
 using BALLib.Services.Service_Interface;
 using CommonlibDAO.Repositories.Implementations;
 using CommonlibDAO.Repositories.Interface;
@@ -19,24 +20,24 @@ namespace BALLib.Services.Service_Implementation
             _config = config;
         }
 
-       public async Task<ApiResponse<List<ClientDTO>>> GetAllClientsAsync()
+       public async Task<ApiResponse<List<GetClientDTO>>> GetAllClientsAsync()
 {
     var clients = await _repo.GetAllClientsAsync();
 
     if (clients == null || clients.Count == 0)
-        return ApiResponse<List<ClientDTO>>
+        return ApiResponse<List<GetClientDTO>>
             .FailureResponse("No clients found.");
 
-    var dtoList = clients.Select(c => new ClientDTO
+    var dtoList = clients.Select(c => new GetClientDTO
     {
         Id = c.ClientId,
-        Name = c.ClientName,
+        ClientName = c.ClientName,
         Email = c.ContactEmail,
         Phone = c.ContactPhone,
         Address = c.Address
     }).ToList();
 
-    return ApiResponse<List<ClientDTO>>
+    return ApiResponse<List<GetClientDTO>>
         .SuccessResponse(dtoList);
 }
 

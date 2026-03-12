@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BALLib.DTOs
+namespace BALLib.DTOs.ClientDTO
 {
-    public class ClientDTO
+    public class GetClientDTO
     {
         public int Id { get; set; }
-        public string Name { get; set; } = string.Empty;
+        public string ClientName { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
         public string Phone { get; set; } = string.Empty;
         public string Address { get; set; } = string.Empty;
