@@ -1,5 +1,5 @@
 ﻿using BALLib.Common;
-using BALLib.DTOs;
+using BALLib.DTOs.LoginDTO;
 using BALLib.Services.Service_Interface;
 using CommonlibDAO.Modles.User_Security;
 using CommonlibDAO.Repositories.Interface;

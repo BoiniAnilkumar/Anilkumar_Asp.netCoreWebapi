@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace BALLib.DTOs
+namespace BALLib.DTOs.EmployeeDropDownDTO
 {
-   public class DropdownDTO
+    public class EmployeeDropdownDTO
     {
-        public int Id { get; set; }
-        public string? Name { get; set; }
+        public int EmployeeId { get; set; }
+        public string? EmployeeName { get; set; }
     }
 }

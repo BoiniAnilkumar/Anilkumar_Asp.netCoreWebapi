@@ -5,40 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace BALLib.DTOs
+namespace BALLib.DTOs.EmployeeDTO
 {
-   public class EmployeeCreateDTO
+    public class EmployeeUpdateDTO
     {
-        [Required]
-        public int ClientId { get; set; }
-
-        [Required]
-        [MaxLength(100)]
         public string? EmployeeName { get; set; }
-
-        [Required]
         [MaxLength(15)]
         public string? PhoneNumber { get; set; }
 
         [EmailAddress]
         public string? EmailId { get; set; }
+        public int GenderId { get; set; }
+        public DateTime Dob { get; set; }
+        public DateTime Doj { get; set; }
 
-        [Required]
-        public string? GenderId { get; set; }
-
-        [Required]
-        public DateTime DOB { get; set; }
-
-        [Required]
-        public DateTime DOJ { get; set; }
-
-        [Required]
-        public int DepartmentId { get; set; }
+        public int? DepartmentId { get; set; }
 
         public int? SectionId { get; set; }
 
-        [Required]
-        public int DesignationId { get; set; }
+        public int? DesignationId { get; set; }
 
         public int? LocationId { get; set; }
 

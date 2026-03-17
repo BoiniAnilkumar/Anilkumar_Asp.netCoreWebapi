@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BALLib.DTOs.ClientDTO
 {
-    public class GetClientDTO
+    public class DeleteClient
     {
-        public int ClientId { get; set; } 
+        public int Id { get; set; }
         public string ClientName { get; set; } = string.Empty;
-        public string ContactEmail { get; set; } = string.Empty;
-        public string ContactPhone { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Phone { get; set; } = string.Empty;
         public string Address { get; set; } = string.Empty;
     }
 }

@@ -1,5 +1,5 @@
 ﻿using BALLib.Common;
-using BALLib.DTOs;
+using BALLib.DTOs.EmployeeDTO;
 using BALLib.Services.Service_Interface;
 using CommonlibDAO;
 using CommonlibDAO.Modles.MasterTables;

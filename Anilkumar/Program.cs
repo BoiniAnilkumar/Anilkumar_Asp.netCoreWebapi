@@ -62,20 +62,22 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 //     ?? DEPENDENCY INJECTION
 // =========================
 //
-builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+//builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+//builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IUserLoginRepository, UserLoginRepository>();
 builder.Services.AddScoped<ILoginService, LoginService>();
 builder.Services.AddScoped<IClientRepositery,ClientRepositery>();
 builder.Services.AddScoped<IClientServices,ClientServices>();
-builder.Services.AddScoped<IAnilRepositery, AnilRepositery>();
-builder.Services.AddScoped<IAnilServices, AnilServices>();
-builder.Services.AddScoped<ITblEmployeeRepository, TblEmployeeRepository>();
-builder.Services.AddScoped<ITblEmployeeServices, TblEmployeeServices>();
+//builder.Services.AddScoped<IAnilRepositery, AnilRepositery>();
+//builder.Services.AddScoped<IAnilServices, AnilServices>();
+//builder.Services.AddScoped<ITblEmployeeRepository, TblEmployeeRepository>();
+//builder.Services.AddScoped<ITblEmployeeServices, TblEmployeeServices>();
 builder.Services.AddScoped<IAddEmployeeRepository, AddEmployeeRepository>();
 builder.Services.AddScoped<IAddEmployeeServices, AddEmployeeServices>();
 builder.Services.AddScoped<IMasterRepository, MasterRepository>();
 builder.Services.AddScoped<IMasterService, MasterService>();
+builder.Services.AddScoped<IClientRepositery, ClientRepositery>();
+builder.Services.AddScoped<IClientServices, ClientServices>();
 
 
 

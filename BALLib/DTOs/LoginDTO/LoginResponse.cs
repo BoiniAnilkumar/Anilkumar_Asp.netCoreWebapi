@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BALLib.DTOs
+namespace BALLib.DTOs.LoginDTO
 {
     public class LoginResponse
     {

@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using BALLib.Services.Service_Interface;
-using BALLib.DTOs;
 using System.Threading.Tasks;
+using BALLib.DTOs.EmployeeDTO;
 
 namespace Anilkumar.Controllers
 {

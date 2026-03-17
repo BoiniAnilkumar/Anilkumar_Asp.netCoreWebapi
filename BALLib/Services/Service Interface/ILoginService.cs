@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BALLib.Common;
-using BALLib.DTOs;
 using System.Threading.Tasks;
+using BALLib.DTOs.LoginDTO;
 
 namespace BALLib.Services.Service_Interface
 {

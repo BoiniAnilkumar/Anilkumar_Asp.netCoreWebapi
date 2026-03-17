@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BALLib.DTOs
+namespace BALLib.DTOs.EmployeeDTO
 {
     public class AddEmployeeDTO
     {
@@ -14,6 +14,7 @@ namespace BALLib.DTOs
 
         [Required]
         [MaxLength(100)]
+        [RegularExpression(@"^[A-Za-z ]+$", ErrorMessage = "Only alphabets allowed")]
         public string? EmployeeName { get; set; }
         [Required] 
         [StringLength(12, MinimumLength = 12, ErrorMessage = "Aadhar must be 12 digits")]
@@ -21,7 +22,7 @@ namespace BALLib.DTOs
         [Required]
         [RegularExpression(@"^[0-9]{10}$", ErrorMessage = "Mobile number must be 10 digits")]
         public string? PhoneNumber { get; set; }
-        [Required]
+        //[Required]
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string? EmailId { get; set; }
         [Required]
